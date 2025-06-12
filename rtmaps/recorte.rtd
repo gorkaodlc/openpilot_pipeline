@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.13" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="0.1"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/openpilot-pipeline/rtmaps/undistort/build/rtmaps_undistort.pck]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/undistort/build/rtmaps_undistort.pck]]></Relative></File>
+    <File Version="2.1.8"><![CDATA[/opt/rtmaps/packages/rtmaps_image_processing_miscellaneous.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_image_processing_miscellaneous.pck]]></Relative></File>
+  </RequiredPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">59000000</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <Component InstanceName="AnyColorSpaceConverter_1" Model="AnyColorSpaceConverter" Version="1.0.4" x="648" y="392" z="0">
+    <Input LongName="AnyColorSpaceConverter_1.imgInput" Name="imgInput">
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.readerType" Type="1">0</Property>
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="AnyColorSpaceConverter_1.IplImageOutput" Name="IplImageOutput">
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.subsampling" Type="1">1</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.fifosize" Type="1">16</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="AnyColorSpaceConverter_1.outputPixelFormat" Type="4"><![CDATA[24|0|BGR|BGRA|GRAY|I420|IYU|RGB|RGB 555|RGB 565|RGBA|UYVY|UYY|VYUY|Y211|Y41P|YUV|YUVA|YUV 411|YUV 420|YUV 422|YUY2|YUYV|YV12|YVU9|YVYU]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputPlanar" Type="0">false</Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputDepth" Type="4"><![CDATA[7|1|U1|U8|S8|U16|S16|S32|F32]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.threaded" Type="0">true</Property>
+    <Property LongName="AnyColorSpaceConverter_1.priority" Type="1">128</Property>
+    <Property LongName="AnyColorSpaceConverter_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="CropAndDecimate_1" Model="CropAndDecimate" Version="3.2.2" x="872" y="176" z="0">
+    <Input LongName="CropAndDecimate_1.input" Name="input">
+      <Property LongName="CropAndDecimate_1.input.readerType" Type="1">0</Property>
+      <Property LongName="CropAndDecimate_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="CropAndDecimate_1.output" Name="output">
+      <Property LongName="CropAndDecimate_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="CropAndDecimate_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="CropAndDecimate_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="CropAndDecimate_1.cropping_specification" Type="4"><![CDATA[3|1|Left Top Right Bottom|Left Top Width Height|CenterX CenterY Width Height]]></Property>
+    <Property LongName="CropAndDecimate_1.left" Type="1">378</Property>
+    <Property LongName="CropAndDecimate_1.top" Type="1">203</Property>
+    <Property LongName="CropAndDecimate_1.width" Type="1">1160</Property>
+    <Property LongName="CropAndDecimate_1.height" Type="1">874</Property>
+    <Property LongName="CropAndDecimate_1.samplingX" Type="1">1</Property>
+    <Property LongName="CropAndDecimate_1.samplingY" Type="1">1</Property>
+    <Property LongName="CropAndDecimate_1.threaded" Type="0">true</Property>
+    <Property LongName="CropAndDecimate_1.priority" Type="1">128</Property>
+    <Property LongName="CropAndDecimate_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="DataViewer_1" Model="DataViewer" Version="2.1.1" x="904" y="344" z="0">
+    <Input LongName="DataViewer_1.input_0" Name="input_0">
+      <Property LongName="DataViewer_1.input_0.readerType" Type="1">4</Property>
+      <Property LongName="DataViewer_1.input_0.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="DataViewer_1.input_1" Name="input_1">
+      <Property LongName="DataViewer_1.input_1.readerType" Type="1">4</Property>
+      <Property LongName="DataViewer_1.input_1.subsampling" Type="1">1</Property>
+    </Input>
+    <Property LongName="DataViewer_1.begin_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="DataViewer_1.widget_begin_config" Type="3" SubType="256"><![CDATA[General Configuration]]></ReadOnlyProperty>
+    <Property LongName="DataViewer_1.autoDirty" Type="0">true</Property>
+    <Property LongName="DataViewer_1.run" Type="0">true</Property>
+    <Property LongName="DataViewer_1.alwaysOnTop" Type="4"><![CDATA[4|0|Only at run time|Only at design time|No|Both at run time and design time]]></Property>
+    <Property LongName="DataViewer_1.moveable" Type="0">true</Property>
+    <Property LongName="DataViewer_1.hidden" Type="0">false</Property>
+    <Property LongName="DataViewer_1.title" Type="3"><![CDATA[]]></Property>
+    <Property LongName="DataViewer_1.x" Type="1">2245</Property>
+    <Property LongName="DataViewer_1.y" Type="1">473</Property>
+    <Property LongName="DataViewer_1.width" Type="1">530</Property>
+    <Property LongName="DataViewer_1.height" Type="1">420</Property>
+    <Property LongName="DataViewer_1.end_guard" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="DataViewer_1.widget_end_config" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="DataViewer_1.specific_begin_config" Type="3" SubType="256"><![CDATA[Specific Configuration]]></ReadOnlyProperty>
+    <Property LongName="DataViewer_1.nbInputs" Type="1">2</Property>
+    <Property LongName="DataViewer_1.compactMode" Type="0">false</Property>
+    <Property LongName="DataViewer_1.showInfo" Type="0">true</Property>
+    <Property LongName="DataViewer_1.showData" Type="0">true</Property>
+    <Property LongName="DataViewer_1.showPrettyTimestamp" Type="0">true</Property>
+    <Property LongName="DataViewer_1.float32Format" Type="3"><![CDATA[%9g]]></Property>
+    <Property LongName="DataViewer_1.float64Format" Type="3"><![CDATA[%9g]]></Property>
+    <Property LongName="DataViewer_1.integer8Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="DataViewer_1.integer16Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="DataViewer_1.integer32Format" Type="3"><![CDATA[%d]]></Property>
+    <Property LongName="DataViewer_1.integer64Format" Type="3"><![CDATA[%ld]]></Property>
+    <Property LongName="DataViewer_1.unsignedInteger8Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="DataViewer_1.unsignedInteger16Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="DataViewer_1.unsignedInteger32Format" Type="3"><![CDATA[%u]]></Property>
+    <Property LongName="DataViewer_1.unsignedInteger64Format" Type="3"><![CDATA[%lu]]></Property>
+    <Property LongName="DataViewer_1.hexDisplay" Type="0">false</Property>
+    <Property LongName="DataViewer_1.internalState" Type="3" SubType="128"><![CDATA[238;282]]></Property>
+    <Property LongName="DataViewer_1.expandedState" Type="3" SubType="128"><![CDATA[1|CropAndDecimate_1.output;1|Info:CropAndDecimate_1.output;0|Type:Info:CropAndDecimate_1.output;0|IplROI:Type:Info:CropAndDecimate_1.output;0|]]></Property>
+    <ReadOnlyProperty LongName="DataViewer_1.specific_end_config" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="DataViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="DataViewer_1.priority" Type="1">128</Property>
+    <Property LongName="DataViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ImageViewer_1" Model="ImageViewer" Version="7.10.6" x="696" y="24" z="0">
+    <Input LongName="ImageViewer_1.input" Name="input">
+      <Property LongName="ImageViewer_1.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="ImageViewer_1.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="ImageViewer_1.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_1.mouseClick" Name="mouseClick">
+      <Property LongName="ImageViewer_1.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_1.keyPress" Name="keyPress">
+      <Property LongName="ImageViewer_1.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_1.title" Type="3"><![CDATA[Crop Viewer]]></Property>
+    <Property LongName="ImageViewer_1.x" Type="1">174</Property>
+    <Property LongName="ImageViewer_1.y" Type="1">49</Property>
+    <Property LongName="ImageViewer_1.width" Type="1">1160</Property>
+    <Property LongName="ImageViewer_1.height" Type="1">874</Property>
+    <Property LongName="ImageViewer_1.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.imagePriority" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.priority" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ImageViewer_1_1" Model="ImageViewer" Version="7.10.6" x="1184" y="296" z="0">
+    <Input LongName="ImageViewer_1_1.input" Name="input">
+      <Property LongName="ImageViewer_1_1.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="ImageViewer_1_1.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="ImageViewer_1_1.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1_1.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_1_1.mouseClick" Name="mouseClick">
+      <Property LongName="ImageViewer_1_1.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1_1.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1_1.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_1_1.keyPress" Name="keyPress">
+      <Property LongName="ImageViewer_1_1.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1_1.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1_1.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_1_1.title" Type="3"><![CDATA[Undistort Viewer]]></Property>
+    <Property LongName="ImageViewer_1_1.x" Type="1">2508</Property>
+    <Property LongName="ImageViewer_1_1.y" Type="1">84</Property>
+    <Property LongName="ImageViewer_1_1.width" Type="1">1160</Property>
+    <Property LongName="ImageViewer_1_1.height" Type="1">874</Property>
+    <Property LongName="ImageViewer_1_1.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_1_1.imagePriority" Type="0">false</Property>
+    <Property LongName="ImageViewer_1_1.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="ImageViewer_1_1.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="ImageViewer_1_1.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="ImageViewer_1_1.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_1_1.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_1_1.priority" Type="1">0</Property>
+    <Property LongName="ImageViewer_1_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="Player_1" Model="Player" Version="2.17.0" x="184" y="184" z="0">
+    <Output LongName="Player_1.FicosaCameras_1.imageFront" Name="FicosaCameras_1.imageFront">
+      <Property LongName="Player_1.FicosaCameras_1.imageFront.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.FicosaCameras_1.imageFront.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.FicosaCameras_1.imageFront.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="Player_1.FicosaCameras_1.imageLeft" Name="FicosaCameras_1.imageLeft">
+      <Property LongName="Player_1.FicosaCameras_1.imageLeft.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.FicosaCameras_1.imageLeft.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.FicosaCameras_1.imageLeft.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="Player_1.FicosaCameras_1_1.imageRight" Name="FicosaCameras_1_1.imageRight">
+      <Property LongName="Player_1.FicosaCameras_1_1.imageRight.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.FicosaCameras_1_1.imageRight.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.FicosaCameras_1_1.imageRight.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="Player_1.FicosaCameras_1_1.imageRear" Name="FicosaCameras_1_1.imageRear">
+      <Property LongName="Player_1.FicosaCameras_1_1.imageRear.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.FicosaCameras_1_1.imageRear.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.FicosaCameras_1_1.imageRear.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="Player_1.Lidar_1_1.output" Name="Lidar_1_1.output">
+      <Property LongName="Player_1.Lidar_1_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.Lidar_1_1.output.fifosize" Type="1">128</Property>
+      <Property LongName="Player_1.Lidar_1_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="Player_1.OXTS_1_1.output" Name="OXTS_1_1.output">
+      <Property LongName="Player_1.OXTS_1_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.fifosize" Type="1">128</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.OXTS_1_1.output.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.OXTS_1_1.output.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.OXTS_1_1.output.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.threaded" Type="0">false</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.priority" Type="1">128</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.replayThreadPriority" Type="1">128</Property>
+    </Output>
+    <Output LongName="Player_1.CANPeak_1_1.output" Name="CANPeak_1_1.output">
+      <Property LongName="Player_1.CANPeak_1_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.CANPeak_1_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.CANPeak_1_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="Player_1.Video4Linux_1.output" Name="Video4Linux_1.output">
+      <Property LongName="Player_1.Video4Linux_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.threaded" Type="0">true</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.priority" Type="1">128</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayThreadPriority" Type="1">128</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.video_stream_copy_output_buffer" Type="1">0</Property>
+    </Output>
+    <Property LongName="Player_1.file" Type="3" SubType="80"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/records/20240228_104551_RecFile_1_1_Amezketa_Abaltzisketa/RecFile_1_1_20240228_104551.rec]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../supercombo_evaluation/records/20240228_104551_RecFile_1_1_Amezketa_Abaltzisketa/RecFile_1_1_20240228_104551.rec]]></Relative></Property>
+    <Property LongName="Player_1.offset" Type="1">0</Property>
+    <Property LongName="Player_1.beginning" Type="1">60000000</Property>
+    <Property LongName="Player_1.end" Type="1">0</Property>
+    <Property LongName="Player_1.timelag" Type="1">100000</Property>
+    <Property LongName="Player_1.update" Type="0">true</Property>
+    <ReadOnlyProperty LongName="Player_1.replayPath" Type="3"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/records/20240228_104551_RecFile_1_1_Amezketa_Abaltzisketa/]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.comments" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.ahead" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.percentage" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.time" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.first" Type="1">60000000</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.last" Type="1">344262505</ReadOnlyProperty>
+    <Property LongName="Player_1.serverThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.mainClientThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.recordingType" Type="4"><![CDATA[4|0|Single rec path|Multiple rec paths (separated by newline)|Splitted rec (indicating a rec path)|Path to a ".recs" file]]></Property>
+    <Property LongName="Player_1.filePaths" Type="3"><![CDATA[]]></Property>
+    <Property LongName="Player_1.skip_files_presence_check" Type="0">false</Property>
+    <Property LongName="Player_1.threaded" Type="0">true</Property>
+    <Property LongName="Player_1.priority" Type="1">200</Property>
+    <Property LongName="Player_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="RecFile_1" Model="RecFile" Version="2.17.1" x="1176" y="64" z="0">
+    <Input LongName="RecFile_1.undistort_1.imageOut.input" Name="input">
+      <Property LongName="RecFile_1.undistort_1.imageOut.input.readerType" Type="1">0</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.input.subsampling" Type="1">1</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.trigger" Type="0">true</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.triggerAtStart" Type="4"><![CDATA[3|0|Do not change|True|False]]></Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.triggerBufferTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.triggerBufferSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.triggerReleaseTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.triggerReleaseSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.recordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.alias" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.record_to_subfolder" Type="0">false</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.subfolder_relative_path" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.useTimestamp" Type="0">false</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.threaded" Type="0">true</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.priority" Type="1">128</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.video_format" Type="4"><![CDATA[138|11|a64 - video for Commodore 64|raw AC-3|ADTS AAC (Advanced Audio Coding)|CRI ADX|Audio IFF|3GPP AMR|ASF (Advanced / Active Streaming Format)|SSA (SubStation Alpha) subtitle|AST (Audio Stream)|ASF (Advanced / Active Streaming Format)|Sun AU|AVI (Audio Video Interleaved)|SWF (ShockWave Flash) (AVM2)|G.729 BIT file format|Apple CAF (Core Audio Format)|raw Chinese AVS (Audio Video Standard) video|CRC testing|DASH Muxer|raw data|D-Cinema audio|raw Dirac|raw DNxHD (SMPTE VC-3)|raw DTS|DV (Digital Video)|raw E-AC-3|F4V Adobe Flash Video|FFM (FFserver live feed)|FFmpeg metadata in text|Adobe Filmstrip|raw FLAC|FLV (Flash Video)|framecrc testing|Per-frame MD5 testing|raw G.722|raw G.723.1|GIF Animation|GXF (General eXchange Format)|raw H.261|raw H.263|raw H.264 video|HDS Muxer|raw HEVC video|Apple HTTP Live Streaming|Microsoft Windows ICO|iLBC storage|image2 sequence|piped image2 sequence|iPod H.264 MP4 (MPEG-4 Part 14)|Berkeley/IRCAM/CARL Sound Format|ISMV/ISMA (Smooth Streaming)|On2 IVF|JACOsub subtitle format|LOAS/LATM|LRC lyrics|raw MPEG-4 video|MD5 testing|Matroska|Matroska Audio|MicroDVD subtitle format|raw MJPEG video|raw MLP|Yamaha SMAF|QuickTime / MOV|MP2 (MPEG audio layer 2)|MP3 (MPEG audio layer 3)|MP4 (MPEG-4 Part 14)|MPEG-1 Systems / MPEG program stream|MPEG-1 Systems / MPEG program stream (VCD)|raw MPEG-1 video|MPEG-2 PS (DVD VOB)|MPEG-2 PS (SVCD)|raw MPEG-2 video|MPEG-2 PS (VOB)|MPEG-TS (MPEG-2 Transport Stream)|MIME multipart JPEG|MXF (Material eXchange Format)|MXF (Material eXchange Format) D-10 Mapping|raw null video|NUT|Ogg Audio|Ogg|Sony OpenMG audio|Ogg Opus|PCM A-law|PCM mu-law|PCM 64-bit floating-point big-endian|PCM 64-bit floating-point little-endian|PCM 32-bit floating-point big-endian|PCM 32-bit floating-point little-endian|PCM signed 32-bit big-endian|PCM signed 32-bit little-endian|PCM signed 24-bit big-endian|PCM signed 24-bit little-endian|PCM signed 16-bit big-endian|PCM signed 16-bit little-endian|PCM signed 8-bit|PCM unsigned 32-bit big-endian|PCM unsigned 32-bit little-endian|PCM unsigned 24-bit big-endian|PCM unsigned 24-bit little-endian|PCM unsigned 16-bit big-endian|PCM unsigned 16-bit little-endian|PCM unsigned 8-bit|PSP MP4 (MPEG-4 Part 14)|raw video|RealMedia|raw id RoQ|Lego Mindstorms RSO|RTP output|RTSP output|SAP output|segment|streaming segment muxer|Loki SDL MJPEG|Smooth Streaming Muxer|SoX native|Ogg Speex|IEC 61937 (used on S/PDIF - IEC958)|SubRip subtitle|SWF (ShockWave Flash)|Multiple muxer tee|3GP2 (3GPP2 file format)|3GP (3GPP file format)|extract pts as timecode v2 format, as defined by mkvtoolnix|raw TrueHD|uncoded framecrc testing|raw VC-1 video|VC-1 test bitstream|Creative Voice|Sony Wave64|WAV / WAVE (Waveform Audio)|WebM|WebM DASH Manifest|WebP|WebVTT subtitle|Windows Television (WTV)|raw WavPack|YUV4MPEG pipe]]></Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.show_all_codecs" Type="0">false</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.video_stream_copy" Type="0">false</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.video_codec" Type="4"><![CDATA[9|1|h263p|mjpeg|jpegls|mpeg1video|mpeg2video|mpeg4|msmpeg4v2|msmpeg4|rawvideo]]></Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.video_vbr_qual" Type="0">true</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.video_quality" Type="1">75</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.video_bitrate" Type="1">400000</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.auto_framerate" Type="0">true</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.estimated_framerate" Type="1">30</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.estimated_framerate_divisor" Type="1">1</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.override_width" Type="1">0</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.override_height" Type="1">0</Property>
+      <Property LongName="RecFile_1.undistort_1.imageOut.format_compatibility" Type="4"><![CDATA[2|1|Version 1|Version 2]]></Property>
+    </Input>
+    <Input LongName="RecFile_1.Player_1.Video4Linux_1.output.input" Name="input">
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.input.readerType" Type="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.input.subsampling" Type="1">1</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.trigger" Type="0">true</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.triggerAtStart" Type="4"><![CDATA[3|0|Do not change|True|False]]></Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.triggerBufferTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.triggerBufferSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.triggerReleaseTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.triggerReleaseSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.recordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.alias" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.record_to_subfolder" Type="0">false</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.subfolder_relative_path" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.useTimestamp" Type="0">false</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.threaded" Type="0">true</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.priority" Type="1">128</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.video_format" Type="4"><![CDATA[138|11|a64 - video for Commodore 64|raw AC-3|ADTS AAC (Advanced Audio Coding)|CRI ADX|Audio IFF|3GPP AMR|ASF (Advanced / Active Streaming Format)|SSA (SubStation Alpha) subtitle|AST (Audio Stream)|ASF (Advanced / Active Streaming Format)|Sun AU|AVI (Audio Video Interleaved)|SWF (ShockWave Flash) (AVM2)|G.729 BIT file format|Apple CAF (Core Audio Format)|raw Chinese AVS (Audio Video Standard) video|CRC testing|DASH Muxer|raw data|D-Cinema audio|raw Dirac|raw DNxHD (SMPTE VC-3)|raw DTS|DV (Digital Video)|raw E-AC-3|F4V Adobe Flash Video|FFM (FFserver live feed)|FFmpeg metadata in text|Adobe Filmstrip|raw FLAC|FLV (Flash Video)|framecrc testing|Per-frame MD5 testing|raw G.722|raw G.723.1|GIF Animation|GXF (General eXchange Format)|raw H.261|raw H.263|raw H.264 video|HDS Muxer|raw HEVC video|Apple HTTP Live Streaming|Microsoft Windows ICO|iLBC storage|image2 sequence|piped image2 sequence|iPod H.264 MP4 (MPEG-4 Part 14)|Berkeley/IRCAM/CARL Sound Format|ISMV/ISMA (Smooth Streaming)|On2 IVF|JACOsub subtitle format|LOAS/LATM|LRC lyrics|raw MPEG-4 video|MD5 testing|Matroska|Matroska Audio|MicroDVD subtitle format|raw MJPEG video|raw MLP|Yamaha SMAF|QuickTime / MOV|MP2 (MPEG audio layer 2)|MP3 (MPEG audio layer 3)|MP4 (MPEG-4 Part 14)|MPEG-1 Systems / MPEG program stream|MPEG-1 Systems / MPEG program stream (VCD)|raw MPEG-1 video|MPEG-2 PS (DVD VOB)|MPEG-2 PS (SVCD)|raw MPEG-2 video|MPEG-2 PS (VOB)|MPEG-TS (MPEG-2 Transport Stream)|MIME multipart JPEG|MXF (Material eXchange Format)|MXF (Material eXchange Format) D-10 Mapping|raw null video|NUT|Ogg Audio|Ogg|Sony OpenMG audio|Ogg Opus|PCM A-law|PCM mu-law|PCM 64-bit floating-point big-endian|PCM 64-bit floating-point little-endian|PCM 32-bit floating-point big-endian|PCM 32-bit floating-point little-endian|PCM signed 32-bit big-endian|PCM signed 32-bit little-endian|PCM signed 24-bit big-endian|PCM signed 24-bit little-endian|PCM signed 16-bit big-endian|PCM signed 16-bit little-endian|PCM signed 8-bit|PCM unsigned 32-bit big-endian|PCM unsigned 32-bit little-endian|PCM unsigned 24-bit big-endian|PCM unsigned 24-bit little-endian|PCM unsigned 16-bit big-endian|PCM unsigned 16-bit little-endian|PCM unsigned 8-bit|PSP MP4 (MPEG-4 Part 14)|raw video|RealMedia|raw id RoQ|Lego Mindstorms RSO|RTP output|RTSP output|SAP output|segment|streaming segment muxer|Loki SDL MJPEG|Smooth Streaming Muxer|SoX native|Ogg Speex|IEC 61937 (used on S/PDIF - IEC958)|SubRip subtitle|SWF (ShockWave Flash)|Multiple muxer tee|3GP2 (3GPP2 file format)|3GP (3GPP file format)|extract pts as timecode v2 format, as defined by mkvtoolnix|raw TrueHD|uncoded framecrc testing|raw VC-1 video|VC-1 test bitstream|Creative Voice|Sony Wave64|WAV / WAVE (Waveform Audio)|WebM|WebM DASH Manifest|WebP|WebVTT subtitle|Windows Television (WTV)|raw WavPack|YUV4MPEG pipe]]></Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.show_all_codecs" Type="0">false</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.video_stream_copy" Type="0">false</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.video_codec" Type="4"><![CDATA[9|1|h263p|mjpeg|jpegls|mpeg1video|mpeg2video|mpeg4|msmpeg4v2|msmpeg4|rawvideo]]></Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.video_vbr_qual" Type="0">true</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.video_quality" Type="1">75</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.video_bitrate" Type="1">400000</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.auto_framerate" Type="0">true</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.estimated_framerate" Type="1">30</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.estimated_framerate_divisor" Type="1">1</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.override_width" Type="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.override_height" Type="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.Video4Linux_1.output.format_compatibility" Type="4"><![CDATA[2|1|Version 1|Version 2]]></Property>
+    </Input>
+    <Input LongName="RecFile_1.Player_1.OXTS_1_1.output.input" Name="input">
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.input.readerType" Type="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.input.subsampling" Type="1">1</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.trigger" Type="0">true</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.triggerAtStart" Type="4"><![CDATA[3|0|Do not change|True|False]]></Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.triggerBufferTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.triggerBufferSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.triggerReleaseTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.triggerReleaseSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.recordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.alias" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.record_to_subfolder" Type="0">false</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.subfolder_relative_path" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.useTimestamp" Type="0">false</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.threaded" Type="0">true</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.priority" Type="1">128</Property>
+      <Property LongName="RecFile_1.Player_1.OXTS_1_1.output.pRecordAlsoInRecFile" Type="0">false</Property>
+    </Input>
+    <Input LongName="RecFile_1.CropAndDecimate_1.output.input" Name="input">
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.input.readerType" Type="1">0</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.input.subsampling" Type="1">1</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.trigger" Type="0">true</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.triggerAtStart" Type="4"><![CDATA[3|0|Do not change|True|False]]></Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.triggerBufferTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.triggerBufferSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.triggerReleaseTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.triggerReleaseSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.recordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.alias" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.record_to_subfolder" Type="0">false</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.subfolder_relative_path" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.useTimestamp" Type="0">false</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.threaded" Type="0">true</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.priority" Type="1">128</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.video_format" Type="4"><![CDATA[138|11|a64 - video for Commodore 64|raw AC-3|ADTS AAC (Advanced Audio Coding)|CRI ADX|Audio IFF|3GPP AMR|ASF (Advanced / Active Streaming Format)|SSA (SubStation Alpha) subtitle|AST (Audio Stream)|ASF (Advanced / Active Streaming Format)|Sun AU|AVI (Audio Video Interleaved)|SWF (ShockWave Flash) (AVM2)|G.729 BIT file format|Apple CAF (Core Audio Format)|raw Chinese AVS (Audio Video Standard) video|CRC testing|DASH Muxer|raw data|D-Cinema audio|raw Dirac|raw DNxHD (SMPTE VC-3)|raw DTS|DV (Digital Video)|raw E-AC-3|F4V Adobe Flash Video|FFM (FFserver live feed)|FFmpeg metadata in text|Adobe Filmstrip|raw FLAC|FLV (Flash Video)|framecrc testing|Per-frame MD5 testing|raw G.722|raw G.723.1|GIF Animation|GXF (General eXchange Format)|raw H.261|raw H.263|raw H.264 video|HDS Muxer|raw HEVC video|Apple HTTP Live Streaming|Microsoft Windows ICO|iLBC storage|image2 sequence|piped image2 sequence|iPod H.264 MP4 (MPEG-4 Part 14)|Berkeley/IRCAM/CARL Sound Format|ISMV/ISMA (Smooth Streaming)|On2 IVF|JACOsub subtitle format|LOAS/LATM|LRC lyrics|raw MPEG-4 video|MD5 testing|Matroska|Matroska Audio|MicroDVD subtitle format|raw MJPEG video|raw MLP|Yamaha SMAF|QuickTime / MOV|MP2 (MPEG audio layer 2)|MP3 (MPEG audio layer 3)|MP4 (MPEG-4 Part 14)|MPEG-1 Systems / MPEG program stream|MPEG-1 Systems / MPEG program stream (VCD)|raw MPEG-1 video|MPEG-2 PS (DVD VOB)|MPEG-2 PS (SVCD)|raw MPEG-2 video|MPEG-2 PS (VOB)|MPEG-TS (MPEG-2 Transport Stream)|MIME multipart JPEG|MXF (Material eXchange Format)|MXF (Material eXchange Format) D-10 Mapping|raw null video|NUT|Ogg Audio|Ogg|Sony OpenMG audio|Ogg Opus|PCM A-law|PCM mu-law|PCM 64-bit floating-point big-endian|PCM 64-bit floating-point little-endian|PCM 32-bit floating-point big-endian|PCM 32-bit floating-point little-endian|PCM signed 32-bit big-endian|PCM signed 32-bit little-endian|PCM signed 24-bit big-endian|PCM signed 24-bit little-endian|PCM signed 16-bit big-endian|PCM signed 16-bit little-endian|PCM signed 8-bit|PCM unsigned 32-bit big-endian|PCM unsigned 32-bit little-endian|PCM unsigned 24-bit big-endian|PCM unsigned 24-bit little-endian|PCM unsigned 16-bit big-endian|PCM unsigned 16-bit little-endian|PCM unsigned 8-bit|PSP MP4 (MPEG-4 Part 14)|raw video|RealMedia|raw id RoQ|Lego Mindstorms RSO|RTP output|RTSP output|SAP output|segment|streaming segment muxer|Loki SDL MJPEG|Smooth Streaming Muxer|SoX native|Ogg Speex|IEC 61937 (used on S/PDIF - IEC958)|SubRip subtitle|SWF (ShockWave Flash)|Multiple muxer tee|3GP2 (3GPP2 file format)|3GP (3GPP file format)|extract pts as timecode v2 format, as defined by mkvtoolnix|raw TrueHD|uncoded framecrc testing|raw VC-1 video|VC-1 test bitstream|Creative Voice|Sony Wave64|WAV / WAVE (Waveform Audio)|WebM|WebM DASH Manifest|WebP|WebVTT subtitle|Windows Television (WTV)|raw WavPack|YUV4MPEG pipe]]></Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.show_all_codecs" Type="0">false</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.video_stream_copy" Type="0">false</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.video_codec" Type="4"><![CDATA[9|1|h263p|mjpeg|jpegls|mpeg1video|mpeg2video|mpeg4|msmpeg4v2|msmpeg4|rawvideo]]></Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.video_vbr_qual" Type="0">true</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.video_quality" Type="1">75</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.video_bitrate" Type="1">400000</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.auto_framerate" Type="0">true</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.estimated_framerate" Type="1">30</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.estimated_framerate_divisor" Type="1">1</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.override_width" Type="1">0</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.override_height" Type="1">0</Property>
+      <Property LongName="RecFile_1.CropAndDecimate_1.output.format_compatibility" Type="4"><![CDATA[2|1|Version 1|Version 2]]></Property>
+    </Input>
+    <Property LongName="RecFile_1.path" Type="3" SubType="32"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/records/20240228_cropped_Amezketa_Abaltzisketa/]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../supercombo_evaluation/records/20240228_cropped_Amezketa_Abaltzisketa]]></Relative></Property>
+    <ReadOnlyProperty LongName="RecFile_1.recordPath" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <Property LongName="RecFile_1.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+    <Property LongName="RecFile_1.comments" Type="3"><![CDATA[]]></Property>
+    <Property LongName="RecFile_1.blackbox" Type="1" SubType="128">0</Property>
+    <Property LongName="RecFile_1.record_buffer_delay" Type="1">1000000</Property>
+    <Property LongName="RecFile_1.delay" Type="1" SubType="128">0</Property>
+    <Property LongName="RecFile_1.createFolder" Type="0">false</Property>
+    <Property LongName="RecFile_1.record_to_subfolders" Type="0">false</Property>
+    <Property LongName="RecFile_1.add_record_start_time_to_folder_and_file_names" Type="0">false</Property>
+    <Property LongName="RecFile_1.allow_record_overwrite" Type="0">false</Property>
+    <ReadOnlyProperty LongName="RecFile_1.record_start_time" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="RecFile_1.triggered_record_methods" Type="3"><![CDATA[undistort_1.imageOut Player_1.Video4Linux_1.output Player_1.OXTS_1_1.output CropAndDecimate_1.output]]></ReadOnlyProperty>
+    <Property LongName="RecFile_1.recs_absolute_paths" Type="0">false</Property>
+    <Property LongName="RecFile_1.threaded" Type="0">false</Property>
+    <Property LongName="RecFile_1.priority" Type="1">128</Property>
+    <Property LongName="RecFile_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="undistort_1" Model="undistort" Version="1.0" x="1080" y="168" z="0">
+    <Input LongName="undistort_1.imageIn" Name="imageIn">
+      <Property LongName="undistort_1.imageIn.readerType" Type="1">0</Property>
+      <Property LongName="undistort_1.imageIn.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="undistort_1.imageOut" Name="imageOut">
+      <Property LongName="undistort_1.imageOut.subsampling" Type="1">1</Property>
+      <Property LongName="undistort_1.imageOut.fifosize" Type="1">16</Property>
+      <Property LongName="undistort_1.imageOut.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="undistort_1.Intrinsics_File" Type="3" SubType="80"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/openpilot-pipeline/rtmaps/isx021_front_crop.yml]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/isx021_front_crop.yml]]></Relative></Property>
+    <Property LongName="undistort_1.threaded" Type="0">true</Property>
+    <Property LongName="undistort_1.priority" Type="1">128</Property>
+    <Property LongName="undistort_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="Player_1.Video4Linux_1.output" Input="AnyColorSpaceConverter_1.imgInput">
+    <Replay Method="video_file"/>
+  </Connection>
+  <Connection Output="AnyColorSpaceConverter_1.IplImageOutput" Input="CropAndDecimate_1.input"/>
+  <Connection Output="CropAndDecimate_1.output" Input="DataViewer_1.input_0"/>
+  <Connection Output="CropAndDecimate_1.output" Input="ImageViewer_1.input"/>
+  <Connection Output="undistort_1.imageOut" Input="ImageViewer_1_1.input"/>
+  <Connection Output="CropAndDecimate_1.output" Input="undistort_1.imageIn"/>
+  <Connection Input="RecFile_1.undistort_1.imageOut.input" Output="undistort_1.imageOut">
+    <Record Method="video_file" neverskipping="false" useTimestamp="false"/>
+  </Connection>
+  <Connection Input="RecFile_1.Player_1.Video4Linux_1.output.input" Output="Player_1.Video4Linux_1.output">
+    <Record Method="video_file" neverskipping="false" useTimestamp="false"/>
+  </Connection>
+  <Connection Input="RecFile_1.Player_1.OXTS_1_1.output.input" Output="Player_1.OXTS_1_1.output">
+    <Record Method="rrmstream" neverskipping="false" useTimestamp="false"/>
+  </Connection>
+  <Connection Input="RecFile_1.CropAndDecimate_1.output.input" Output="CropAndDecimate_1.output">
+    <Record Method="video_file" neverskipping="false" useTimestamp="false"/>
+  </Connection>
+  <RTBoardView ID="JavaStudio1.0">
+    <ComponentBox InstanceName="ImageViewer_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="undistort_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CropAndDecimate_1.input" color="0"/>
+    <ConnectionShape InstanceName="DataViewer_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ncomm_decoder_1.stream_in" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.gps_heading" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.lat_lon_alt" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CropAndDecimate_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.OXTS_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.Video4Linux_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.PythonBridge_1.out.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.SUPERCOMBO.prediction.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.undistort_1.imageOut.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.undistort_1_1.imageOut.input" color="0"/>
+    <ConnectionShape InstanceName="SUPERCOMBO.image_in" color="0"/>
+    <ConnectionShape InstanceName="undistort_1.imageIn" color="0"/>
+    <ConnectionShape InstanceName="undistort_1_1.imageIn" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>

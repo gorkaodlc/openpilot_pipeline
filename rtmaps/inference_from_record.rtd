@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.13" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="4.5.0"><![CDATA[/opt/rtmaps/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+  </RequiredPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">59004254</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <Component InstanceName="ImageViewer_1" Model="ImageViewer" Version="7.10.6" x="800" y="136" z="0">
+    <Input LongName="ImageViewer_1.input" Name="input">
+      <Property LongName="ImageViewer_1.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="ImageViewer_1.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="ImageViewer_1.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_1.mouseClick" Name="mouseClick">
+      <Property LongName="ImageViewer_1.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_1.keyPress" Name="keyPress">
+      <Property LongName="ImageViewer_1.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_1.title" Type="3"><![CDATA[SC PREDICTION]]></Property>
+    <Property LongName="ImageViewer_1.x" Type="1">2700</Property>
+    <Property LongName="ImageViewer_1.y" Type="1">130</Property>
+    <Property LongName="ImageViewer_1.width" Type="1">640</Property>
+    <Property LongName="ImageViewer_1.height" Type="1">480</Property>
+    <Property LongName="ImageViewer_1.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.imagePriority" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.priority" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ImageViewer_1_1" Model="ImageViewer" Version="7.10.6" x="368" y="56" z="0">
+    <Input LongName="ImageViewer_1_1.input" Name="input">
+      <Property LongName="ImageViewer_1_1.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="ImageViewer_1_1.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="ImageViewer_1_1.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1_1.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_1_1.mouseClick" Name="mouseClick">
+      <Property LongName="ImageViewer_1_1.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1_1.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1_1.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_1_1.keyPress" Name="keyPress">
+      <Property LongName="ImageViewer_1_1.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1_1.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1_1.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_1_1.title" Type="3"><![CDATA[REAL IMAGE]]></Property>
+    <Property LongName="ImageViewer_1_1.x" Type="1">0</Property>
+    <Property LongName="ImageViewer_1_1.y" Type="1">0</Property>
+    <Property LongName="ImageViewer_1_1.width" Type="1">1920</Property>
+    <Property LongName="ImageViewer_1_1.height" Type="1">1043</Property>
+    <Property LongName="ImageViewer_1_1.autoResize" Type="0">false</Property>
+    <Property LongName="ImageViewer_1_1.imagePriority" Type="0">false</Property>
+    <Property LongName="ImageViewer_1_1.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="ImageViewer_1_1.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="ImageViewer_1_1.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="ImageViewer_1_1.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_1_1.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_1_1.priority" Type="1">0</Property>
+    <Property LongName="ImageViewer_1_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="Player_1" Model="Player" Version="2.17.0" x="112" y="120" z="0">
+    <Output LongName="Player_1.OXTS_1_1.output" Name="OXTS_1_1.output">
+      <Property LongName="Player_1.OXTS_1_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.fifosize" Type="1">128</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="Player_1.undistort_1.imageOut" Name="undistort_1.imageOut">
+      <Property LongName="Player_1.undistort_1.imageOut.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="Player_1.Video4Linux_1.output" Name="Video4Linux_1.output">
+      <Property LongName="Player_1.Video4Linux_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.threaded" Type="0">true</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.priority" Type="1">128</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayThreadPriority" Type="1">128</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.video_stream_copy_output_buffer" Type="1">0</Property>
+    </Output>
+    <Output LongName="Player_1.CropAndDecimate_1.output" Name="CropAndDecimate_1.output">
+      <Property LongName="Player_1.CropAndDecimate_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.threaded" Type="0">true</Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.priority" Type="1">128</Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.replayThreadPriority" Type="1">128</Property>
+      <Property LongName="Player_1.CropAndDecimate_1.output.video_stream_copy_output_buffer" Type="1">0</Property>
+    </Output>
+    <Property LongName="Player_1.file" Type="3" SubType="80"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/records/20240228_cropped_Amezketa_Abaltzisketa/RecFile_1_20250404_133144.rec]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../supercombo_evaluation/records/20240228_cropped_Amezketa_Abaltzisketa/RecFile_1_20250404_133144.rec]]></Relative></Property>
+    <Property LongName="Player_1.offset" Type="1">0</Property>
+    <Property LongName="Player_1.beginning" Type="1">0</Property>
+    <Property LongName="Player_1.end" Type="1">0</Property>
+    <Property LongName="Player_1.timelag" Type="1">100000</Property>
+    <Property LongName="Player_1.update" Type="0">true</Property>
+    <ReadOnlyProperty LongName="Player_1.replayPath" Type="3"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/records/20240228_cropped_Amezketa_Abaltzisketa/]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.comments" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.ahead" Type="1">185746</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.percentage" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.time" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.first" Type="1">60004254</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.last" Type="1">278203805</ReadOnlyProperty>
+    <Property LongName="Player_1.serverThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.mainClientThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.recordingType" Type="4"><![CDATA[4|0|Single rec path|Multiple rec paths (separated by newline)|Splitted rec (indicating a rec path)|Path to a ".recs" file]]></Property>
+    <Property LongName="Player_1.filePaths" Type="3"><![CDATA[]]></Property>
+    <Property LongName="Player_1.skip_files_presence_check" Type="0">false</Property>
+    <Property LongName="Player_1.threaded" Type="0">true</Property>
+    <Property LongName="Player_1.priority" Type="1">200</Property>
+    <Property LongName="Player_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="RecFile_1" Model="RecFile" Version="2.17.1" x="608" y="336" z="0">
+    <Input LongName="RecFile_1.SUPERCOMBO.prediction.input" Name="input">
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.input.readerType" Type="1">0</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.input.subsampling" Type="1">1</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.trigger" Type="0">true</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.triggerAtStart" Type="4"><![CDATA[3|0|Do not change|True|False]]></Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.triggerBufferTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.triggerBufferSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.triggerReleaseTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.triggerReleaseSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.recordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.alias" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.record_to_subfolder" Type="0">false</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.subfolder_relative_path" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.useTimestamp" Type="0">false</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.threaded" Type="0">true</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.priority" Type="1">128</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.video_format" Type="4"><![CDATA[138|11|a64 - video for Commodore 64|raw AC-3|ADTS AAC (Advanced Audio Coding)|CRI ADX|Audio IFF|3GPP AMR|ASF (Advanced / Active Streaming Format)|SSA (SubStation Alpha) subtitle|AST (Audio Stream)|ASF (Advanced / Active Streaming Format)|Sun AU|AVI (Audio Video Interleaved)|SWF (ShockWave Flash) (AVM2)|G.729 BIT file format|Apple CAF (Core Audio Format)|raw Chinese AVS (Audio Video Standard) video|CRC testing|DASH Muxer|raw data|D-Cinema audio|raw Dirac|raw DNxHD (SMPTE VC-3)|raw DTS|DV (Digital Video)|raw E-AC-3|F4V Adobe Flash Video|FFM (FFserver live feed)|FFmpeg metadata in text|Adobe Filmstrip|raw FLAC|FLV (Flash Video)|framecrc testing|Per-frame MD5 testing|raw G.722|raw G.723.1|GIF Animation|GXF (General eXchange Format)|raw H.261|raw H.263|raw H.264 video|HDS Muxer|raw HEVC video|Apple HTTP Live Streaming|Microsoft Windows ICO|iLBC storage|image2 sequence|piped image2 sequence|iPod H.264 MP4 (MPEG-4 Part 14)|Berkeley/IRCAM/CARL Sound Format|ISMV/ISMA (Smooth Streaming)|On2 IVF|JACOsub subtitle format|LOAS/LATM|LRC lyrics|raw MPEG-4 video|MD5 testing|Matroska|Matroska Audio|MicroDVD subtitle format|raw MJPEG video|raw MLP|Yamaha SMAF|QuickTime / MOV|MP2 (MPEG audio layer 2)|MP3 (MPEG audio layer 3)|MP4 (MPEG-4 Part 14)|MPEG-1 Systems / MPEG program stream|MPEG-1 Systems / MPEG program stream (VCD)|raw MPEG-1 video|MPEG-2 PS (DVD VOB)|MPEG-2 PS (SVCD)|raw MPEG-2 video|MPEG-2 PS (VOB)|MPEG-TS (MPEG-2 Transport Stream)|MIME multipart JPEG|MXF (Material eXchange Format)|MXF (Material eXchange Format) D-10 Mapping|raw null video|NUT|Ogg Audio|Ogg|Sony OpenMG audio|Ogg Opus|PCM A-law|PCM mu-law|PCM 64-bit floating-point big-endian|PCM 64-bit floating-point little-endian|PCM 32-bit floating-point big-endian|PCM 32-bit floating-point little-endian|PCM signed 32-bit big-endian|PCM signed 32-bit little-endian|PCM signed 24-bit big-endian|PCM signed 24-bit little-endian|PCM signed 16-bit big-endian|PCM signed 16-bit little-endian|PCM signed 8-bit|PCM unsigned 32-bit big-endian|PCM unsigned 32-bit little-endian|PCM unsigned 24-bit big-endian|PCM unsigned 24-bit little-endian|PCM unsigned 16-bit big-endian|PCM unsigned 16-bit little-endian|PCM unsigned 8-bit|PSP MP4 (MPEG-4 Part 14)|raw video|RealMedia|raw id RoQ|Lego Mindstorms RSO|RTP output|RTSP output|SAP output|segment|streaming segment muxer|Loki SDL MJPEG|Smooth Streaming Muxer|SoX native|Ogg Speex|IEC 61937 (used on S/PDIF - IEC958)|SubRip subtitle|SWF (ShockWave Flash)|Multiple muxer tee|3GP2 (3GPP2 file format)|3GP (3GPP file format)|extract pts as timecode v2 format, as defined by mkvtoolnix|raw TrueHD|uncoded framecrc testing|raw VC-1 video|VC-1 test bitstream|Creative Voice|Sony Wave64|WAV / WAVE (Waveform Audio)|WebM|WebM DASH Manifest|WebP|WebVTT subtitle|Windows Television (WTV)|raw WavPack|YUV4MPEG pipe]]></Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.show_all_codecs" Type="0">false</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.video_stream_copy" Type="0">false</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.video_codec" Type="4"><![CDATA[9|1|h263p|mjpeg|jpegls|mpeg1video|mpeg2video|mpeg4|msmpeg4v2|msmpeg4|rawvideo]]></Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.video_vbr_qual" Type="0">true</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.video_quality" Type="1">75</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.video_bitrate" Type="1">400000</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.auto_framerate" Type="0">true</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.estimated_framerate" Type="1">30</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.estimated_framerate_divisor" Type="1">1</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.override_width" Type="1">0</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.override_height" Type="1">0</Property>
+      <Property LongName="RecFile_1.SUPERCOMBO.prediction.format_compatibility" Type="4"><![CDATA[2|1|Version 1|Version 2]]></Property>
+    </Input>
+    <Property LongName="RecFile_1.path" Type="3" SubType="32"><![CDATA[/tmp/]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../../../tmp]]></Relative></Property>
+    <ReadOnlyProperty LongName="RecFile_1.recordPath" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <Property LongName="RecFile_1.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+    <Property LongName="RecFile_1.comments" Type="3"><![CDATA[]]></Property>
+    <Property LongName="RecFile_1.blackbox" Type="1" SubType="128">0</Property>
+    <Property LongName="RecFile_1.record_buffer_delay" Type="1">1000000</Property>
+    <Property LongName="RecFile_1.delay" Type="1" SubType="128">0</Property>
+    <Property LongName="RecFile_1.createFolder" Type="0">true</Property>
+    <Property LongName="RecFile_1.record_to_subfolders" Type="0">false</Property>
+    <Property LongName="RecFile_1.add_record_start_time_to_folder_and_file_names" Type="0">false</Property>
+    <Property LongName="RecFile_1.allow_record_overwrite" Type="0">false</Property>
+    <ReadOnlyProperty LongName="RecFile_1.record_start_time" Type="3"><![CDATA[20250404_134209254056]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="RecFile_1.triggered_record_methods" Type="3"><![CDATA[SUPERCOMBO.prediction]]></ReadOnlyProperty>
+    <Property LongName="RecFile_1.recs_absolute_paths" Type="0">false</Property>
+    <Property LongName="RecFile_1.threaded" Type="0">false</Property>
+    <Property LongName="RecFile_1.priority" Type="1">128</Property>
+    <Property LongName="RecFile_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="SUPERCOMBO" Model="PythonBridge" Version="4.5.0" x="496" y="136" z="0">
+    <Input LongName="SUPERCOMBO.image_in" Name="image_in">
+      <Property LongName="SUPERCOMBO.image_in.readerType" Type="1">0</Property>
+      <Property LongName="SUPERCOMBO.image_in.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="SUPERCOMBO.prediction" Name="prediction">
+      <Property LongName="SUPERCOMBO.prediction.subsampling" Type="1">1</Property>
+      <Property LongName="SUPERCOMBO.prediction.fifosize" Type="1">16</Property>
+      <Property LongName="SUPERCOMBO.prediction.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="SUPERCOMBO.guard_begin" Type="0" SubType="128">true</Property>
+    <Property LongName="SUPERCOMBO.internalInputs" Type="3" SubType="128"><![CDATA[image_in;1==]]></Property>
+    <Property LongName="SUPERCOMBO.internalOutputs" Type="3" SubType="128"><![CDATA[prediction;18==;0]]></Property>
+    <Property LongName="SUPERCOMBO.internalProperties" Type="3" SubType="128"><![CDATA[ground_truth_trajectory||13||/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/csvs/20240228_Amezketa_Abaltzisketa/RecFile_1_20250404_133708_PythonBridge_1_out.csv||14#model_path||13||/home/VICOMTECH/gortiz/Proyectos/Mendi4U/openpilot-pipeline/common/models/supercombo.onnx||14]]></Property>
+    <ReadOnlyProperty LongName="SUPERCOMBO.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+    <Property LongName="SUPERCOMBO.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+    <Property LongName="SUPERCOMBO.capturePythonPrint" Type="0">true</Property>
+    <Property LongName="SUPERCOMBO.useTCPOnly" Type="0">false</Property>
+    <ReadOnlyProperty LongName="SUPERCOMBO.pythonPID" Type="1">1191070</ReadOnlyProperty>
+    <Property LongName="SUPERCOMBO.FileSHMSize" Type="1">15000000</Property>
+    <Property LongName="SUPERCOMBO.useNuitka" Type="0">false</Property>
+    <Property LongName="SUPERCOMBO.loadingTimeout" Type="1">8000000</Property>
+    <ReadOnlyProperty LongName="SUPERCOMBO.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="SUPERCOMBO.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+    <Property LongName="SUPERCOMBO.className" Type="3"><![CDATA[rtmaps_python]]></Property>
+    <Property LongName="SUPERCOMBO.pythonExecutable" Type="3" SubType="16"><![CDATA[/home/VICOMTECH/gortiz/anaconda3/envs/openpilot-supercombo/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../anaconda3/envs/openpilot-supercombo/bin/python]]></Relative></Property>
+    <Property LongName="SUPERCOMBO.pythonFilename" Type="3" SubType="80"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/openpilot-pipeline/rtmaps/rtmaps_inference.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/rtmaps_inference.py]]></Relative></Property>
+    <Property LongName="SUPERCOMBO.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+    <Property LongName="SUPERCOMBO.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
+    <ReadOnlyProperty LongName="SUPERCOMBO.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="SUPERCOMBO.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+    <Property LongName="SUPERCOMBO.ground_truth_trajectory" Type="3" SubType="16"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/csvs/20240228_Amezketa_Abaltzisketa/RecFile_1_20250404_133708_PythonBridge_1_out.csv]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../supercombo_evaluation/csvs/20240228_Amezketa_Abaltzisketa/RecFile_1_20250404_133708_PythonBridge_1_out.csv]]></Relative></Property>
+    <Property LongName="SUPERCOMBO.model_path" Type="3" SubType="16"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/openpilot-pipeline/common/models/supercombo.onnx]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../common/models/supercombo.onnx]]></Relative></Property>
+    <Property LongName="SUPERCOMBO.guard_end" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="SUPERCOMBO.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="SUPERCOMBO.threaded" Type="0">true</Property>
+    <Property LongName="SUPERCOMBO.priority" Type="1">128</Property>
+    <Property LongName="SUPERCOMBO.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="SUPERCOMBO.prediction" Input="ImageViewer_1.input"/>
+  <Connection Output="Player_1.Video4Linux_1.output" Input="ImageViewer_1_1.input">
+    <Replay Method="video_file"/>
+  </Connection>
+  <Connection Output="Player_1.CropAndDecimate_1.output" Input="SUPERCOMBO.image_in">
+    <Replay Method="video_file"/>
+  </Connection>
+  <Connection Input="RecFile_1.SUPERCOMBO.prediction.input" Output="SUPERCOMBO.prediction">
+    <Record Method="video_file" neverskipping="false" useTimestamp="false"/>
+  </Connection>
+  <RTBoardView ID="JavaStudio1.0">
+    <ComponentBox InstanceName="ImageViewer_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="undistort_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CropAndDecimate_1.input" color="0"/>
+    <ConnectionShape InstanceName="DataViewer_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ncomm_decoder_1.stream_in" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.gps_heading" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.lat_lon_alt" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CropAndDecimate_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.OXTS_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.Video4Linux_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.PythonBridge_1.out.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.SUPERCOMBO.prediction.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.undistort_1.imageOut.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.undistort_1_1.imageOut.input" color="0"/>
+    <ConnectionShape InstanceName="SUPERCOMBO.image_in" color="0"/>
+    <ConnectionShape InstanceName="undistort_1.imageIn" color="0"/>
+    <ConnectionShape InstanceName="undistort_1_1.imageIn" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>

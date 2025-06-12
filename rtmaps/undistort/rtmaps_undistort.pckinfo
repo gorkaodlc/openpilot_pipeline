@@ -1,0 +1,7 @@
+# Package information
+VERSION=0.1
+DESCRIPTION=OpenCV undistort function
+
+# 0.1: initial release
+ RTMaps module. One input image, one output rectified image
+

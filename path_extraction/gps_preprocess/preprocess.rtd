@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.13" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="1.5.4"><![CDATA[/opt/rtmaps/packages/rtmaps_oxts/rtmaps_oxts.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_oxts/rtmaps_oxts.pck]]></Relative></File>
+    <File Version="4.5.0"><![CDATA[/opt/rtmaps/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+  </RequiredPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">0</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <Component InstanceName="ImageViewer_1" Model="ImageViewer" Version="7.10.6" x="376" y="328" z="0">
+    <Input LongName="ImageViewer_1.input" Name="input">
+      <Property LongName="ImageViewer_1.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="ImageViewer_1.iDrawingObjects" Name="iDrawingObjects">
+      <Property LongName="ImageViewer_1.iDrawingObjects.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.iDrawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_1.mouseClick" Name="mouseClick">
+      <Property LongName="ImageViewer_1.mouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.mouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.mouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_1.keyPress" Name="keyPress">
+      <Property LongName="ImageViewer_1.keyPress.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.keyPress.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.keyPress.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_1.title" Type="3"><![CDATA[Image Viewer]]></Property>
+    <Property LongName="ImageViewer_1.x" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.y" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.width" Type="1">1160</Property>
+    <Property LongName="ImageViewer_1.height" Type="1">874</Property>
+    <Property LongName="ImageViewer_1.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.imagePriority" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.accumulateDrawingObjects" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.updateGeometryOnDeath" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.alwaysOnTop" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.priority" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ncomm_decoder_1" Model="ncomm_decoder" Version="1.4.1" x="488" y="232" z="0">
+    <Input LongName="ncomm_decoder_1.stream_in" Name="stream_in">
+      <Property LongName="ncomm_decoder_1.stream_in.readerType" Type="1">0</Property>
+      <Property LongName="ncomm_decoder_1.stream_in.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ncomm_decoder_1.gps_pos_lla" Name="gps_pos_lla">
+      <Property LongName="ncomm_decoder_1.gps_pos_lla.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.gps_pos_lla.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.gps_pos_lla.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.gps_heading" Name="gps_heading">
+      <Property LongName="ncomm_decoder_1.gps_heading.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.gps_heading.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.gps_heading.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.navigation_status" Name="navigation_status">
+      <Property LongName="ncomm_decoder_1.navigation_status.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.navigation_status.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.navigation_status.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.nb_sats" Name="nb_sats">
+      <Property LongName="ncomm_decoder_1.nb_sats.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.nb_sats.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.nb_sats.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.UTC_time_us" Name="UTC_time_us">
+      <Property LongName="ncomm_decoder_1.UTC_time_us.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.UTC_time_us.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.UTC_time_us.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.pitch" Name="pitch">
+      <Property LongName="ncomm_decoder_1.pitch.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.pitch.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.pitch.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.roll" Name="roll">
+      <Property LongName="ncomm_decoder_1.roll.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.roll.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.roll.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.slip" Name="slip">
+      <Property LongName="ncomm_decoder_1.slip.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.slip.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.slip.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.angular_rate_forward" Name="angular_rate_forward">
+      <Property LongName="ncomm_decoder_1.angular_rate_forward.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.angular_rate_forward.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.angular_rate_forward.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.angular_rate_lateral" Name="angular_rate_lateral">
+      <Property LongName="ncomm_decoder_1.angular_rate_lateral.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.angular_rate_lateral.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.angular_rate_lateral.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.angular_rate_down" Name="angular_rate_down">
+      <Property LongName="ncomm_decoder_1.angular_rate_down.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.angular_rate_down.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.angular_rate_down.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.north_velocity" Name="north_velocity">
+      <Property LongName="ncomm_decoder_1.north_velocity.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.north_velocity.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.north_velocity.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.east_velocity" Name="east_velocity">
+      <Property LongName="ncomm_decoder_1.east_velocity.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.east_velocity.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.east_velocity.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.downward_velocity" Name="downward_velocity">
+      <Property LongName="ncomm_decoder_1.downward_velocity.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.downward_velocity.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.downward_velocity.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.acceleration_forward" Name="acceleration_forward">
+      <Property LongName="ncomm_decoder_1.acceleration_forward.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.acceleration_forward.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.acceleration_forward.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.acceleration_laterally" Name="acceleration_laterally">
+      <Property LongName="ncomm_decoder_1.acceleration_laterally.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.acceleration_laterally.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.acceleration_laterally.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.acceleration_downward" Name="acceleration_downward">
+      <Property LongName="ncomm_decoder_1.acceleration_downward.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.acceleration_downward.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.acceleration_downward.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ncomm_decoder_1.ncom_struct" Name="ncom_struct">
+      <Property LongName="ncomm_decoder_1.ncom_struct.subsampling" Type="1">1</Property>
+      <Property LongName="ncomm_decoder_1.ncom_struct.fifosize" Type="1">16</Property>
+      <Property LongName="ncomm_decoder_1.ncom_struct.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ncomm_decoder_1.verbose" Type="0">false</Property>
+    <Property LongName="ncomm_decoder_1.threaded" Type="0">true</Property>
+    <Property LongName="ncomm_decoder_1.priority" Type="1">128</Property>
+    <Property LongName="ncomm_decoder_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="Player_1" Model="Player" Version="2.17.0" x="104" y="208" z="0">
+    <Output LongName="Player_1.OXTS_1_1.output" Name="OXTS_1_1.output">
+      <Property LongName="Player_1.OXTS_1_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.fifosize" Type="1">128</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.OXTS_1_1.output.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.OXTS_1_1.output.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.OXTS_1_1.output.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.threaded" Type="0">false</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.priority" Type="1">128</Property>
+      <Property LongName="Player_1.OXTS_1_1.output.replayThreadPriority" Type="1">128</Property>
+    </Output>
+    <Output LongName="Player_1.Video4Linux_1.output" Name="Video4Linux_1.output">
+      <Property LongName="Player_1.Video4Linux_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.Video4Linux_1.output.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.threaded" Type="0">true</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.priority" Type="1">128</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.replayThreadPriority" Type="1">128</Property>
+      <Property LongName="Player_1.Video4Linux_1.output.video_stream_copy_output_buffer" Type="1">0</Property>
+    </Output>
+    <Output LongName="Player_1.undistort_1.imageOut" Name="undistort_1.imageOut">
+      <Property LongName="Player_1.undistort_1.imageOut.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.fifosize" Type="1">16</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.undistort_1.imageOut.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.undistort_1.imageOut.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.undistort_1.imageOut.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.threaded" Type="0">true</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.priority" Type="1">128</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.replayThreadPriority" Type="1">128</Property>
+      <Property LongName="Player_1.undistort_1.imageOut.video_stream_copy_output_buffer" Type="1">0</Property>
+    </Output>
+    <Property LongName="Player_1.file" Type="3" SubType="80"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/records/20240228_cropped_Amezketa_Abaltzisketa/RecFile_1_20250404_123857.rec]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../records/20240228_cropped_Amezketa_Abaltzisketa/RecFile_1_20250404_123857.rec]]></Relative></Property>
+    <Property LongName="Player_1.offset" Type="1">0</Property>
+    <Property LongName="Player_1.beginning" Type="1">0</Property>
+    <Property LongName="Player_1.end" Type="1">0</Property>
+    <Property LongName="Player_1.timelag" Type="1">100000</Property>
+    <Property LongName="Player_1.update" Type="0">true</Property>
+    <ReadOnlyProperty LongName="Player_1.replayPath" Type="3"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/records/20240228_cropped_Amezketa_Abaltzisketa/]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.comments" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.ahead" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.percentage" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.time" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.first" Type="1">164459</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.last" Type="1">344853677</ReadOnlyProperty>
+    <Property LongName="Player_1.serverThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.mainClientThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.recordingType" Type="4"><![CDATA[4|0|Single rec path|Multiple rec paths (separated by newline)|Splitted rec (indicating a rec path)|Path to a ".recs" file]]></Property>
+    <Property LongName="Player_1.filePaths" Type="3"><![CDATA[]]></Property>
+    <Property LongName="Player_1.skip_files_presence_check" Type="0">false</Property>
+    <Property LongName="Player_1.threaded" Type="0">true</Property>
+    <Property LongName="Player_1.priority" Type="1">200</Property>
+    <Property LongName="Player_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="PythonBridge_1" Model="PythonBridge" Version="4.5.0" x="776" y="184" z="0">
+    <Input LongName="PythonBridge_1.lat_lon_alt" Name="lat_lon_alt">
+      <Property LongName="PythonBridge_1.lat_lon_alt.readerType" Type="1">0</Property>
+      <Property LongName="PythonBridge_1.lat_lon_alt.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="PythonBridge_1.gps_heading" Name="gps_heading">
+      <Property LongName="PythonBridge_1.gps_heading.readerType" Type="1">4</Property>
+      <Property LongName="PythonBridge_1.gps_heading.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="PythonBridge_1.out" Name="out">
+      <Property LongName="PythonBridge_1.out.subsampling" Type="1">1</Property>
+      <Property LongName="PythonBridge_1.out.fifosize" Type="1">16</Property>
+      <Property LongName="PythonBridge_1.out.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="PythonBridge_1.guard_begin" Type="0" SubType="128">true</Property>
+    <Property LongName="PythonBridge_1.internalInputs" Type="3" SubType="128"><![CDATA[lat_lon_alt;1==#gps_heading;1==]]></Property>
+    <Property LongName="PythonBridge_1.internalOutputs" Type="3" SubType="128"><![CDATA[out;0==;0]]></Property>
+    <Property LongName="PythonBridge_1.internalProperties" Type="3" SubType="128"><![CDATA[]]></Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+    <Property LongName="PythonBridge_1.capturePythonPrint" Type="0">true</Property>
+    <Property LongName="PythonBridge_1.useTCPOnly" Type="0">false</Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.pythonPID" Type="1">954818</ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.FileSHMSize" Type="1">15000000</Property>
+    <Property LongName="PythonBridge_1.useNuitka" Type="0">false</Property>
+    <Property LongName="PythonBridge_1.loadingTimeout" Type="1">8000000</Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="PythonBridge_1.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.className" Type="3"><![CDATA[rtmaps_python]]></Property>
+    <Property LongName="PythonBridge_1.pythonExecutable" Type="3" SubType="16"><![CDATA[/home/VICOMTECH/gortiz/anaconda3/envs/openpilot-supercombo/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../anaconda3/envs/openpilot-supercombo/bin/python]]></Relative></Property>
+    <Property LongName="PythonBridge_1.pythonFilename" Type="3" SubType="80"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/gps_preprocess/full_gps_recorder.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/full_gps_recorder.py]]></Relative></Property>
+    <Property LongName="PythonBridge_1.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+    <Property LongName="PythonBridge_1.inputsBehavior" Type="4"><![CDATA[2|1|AllowEmptyInputs|Wait4AllInputs]]></Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="PythonBridge_1.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.guard_end" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.threaded" Type="0">true</Property>
+    <Property LongName="PythonBridge_1.priority" Type="1">128</Property>
+    <Property LongName="PythonBridge_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="RecFile_1" Model="RecFile" Version="2.17.1" x="936" y="208" z="0">
+    <Input LongName="RecFile_1.PythonBridge_1.out.input" Name="input">
+      <Property LongName="RecFile_1.PythonBridge_1.out.input.readerType" Type="1">0</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.input.subsampling" Type="1">1</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.trigger" Type="0">true</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.triggerAtStart" Type="4"><![CDATA[3|0|Do not change|True|False]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.triggerBufferTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.triggerBufferSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.triggerReleaseTime" Type="1" SubType="1">0</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.triggerReleaseSize" Type="1">0</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.recordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.alias" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.record_to_subfolder" Type="0">false</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.subfolder_relative_path" Type="3"><![CDATA[]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.useTimestamp" Type="0">true</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.threaded" Type="0">true</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.priority" Type="1">128</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.timestamp" Type="0">true</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.timeOfIssue" Type="0">false</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.timeFormat" Type="4"><![CDATA[4|3|YYYY/MM/DD hh:mm:ss.etc UTC|YYYY/MM/DD hh:mm:ss.etc Local Time|hh:mm:ss.etc|no format]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.append_utc_local_suffix" Type="0">true</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.separatorChar" Type="4"><![CDATA[4|0|;|,|Tab|.]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.timestampingPrecision" Type="4"><![CDATA[2|1|Milliseconds|Microseconds]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.doubles_precision" Type="1">12</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.depacketize" Type="0">false</Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.headerType" Type="4"><![CDATA[3|0|None|Manual|Auto (based on upstream graph)]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.manualHeader" Type="3"><![CDATA[Channel A; Channel B; Channel C;]]></Property>
+      <Property LongName="RecFile_1.PythonBridge_1.out.force_float_format" Type="3"><![CDATA[]]></Property>
+    </Input>
+    <Property LongName="RecFile_1.path" Type="3" SubType="32"><![CDATA[/home/VICOMTECH/gortiz/Proyectos/Mendi4U/supercombo_evaluation/csvs/20240228_Amezketa_Abaltzisketa/]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../csvs/20240228_Amezketa_Abaltzisketa]]></Relative></Property>
+    <ReadOnlyProperty LongName="RecFile_1.recordPath" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <Property LongName="RecFile_1.fastRecordPath" Type="3" SubType="32"><![CDATA[]]></Property>
+    <Property LongName="RecFile_1.comments" Type="3"><![CDATA[]]></Property>
+    <Property LongName="RecFile_1.blackbox" Type="1" SubType="128">0</Property>
+    <Property LongName="RecFile_1.record_buffer_delay" Type="1">1000000</Property>
+    <Property LongName="RecFile_1.delay" Type="1" SubType="128">0</Property>
+    <Property LongName="RecFile_1.createFolder" Type="0">false</Property>
+    <Property LongName="RecFile_1.record_to_subfolders" Type="0">false</Property>
+    <Property LongName="RecFile_1.add_record_start_time_to_folder_and_file_names" Type="0">false</Property>
+    <Property LongName="RecFile_1.allow_record_overwrite" Type="0">false</Property>
+    <ReadOnlyProperty LongName="RecFile_1.record_start_time" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="RecFile_1.triggered_record_methods" Type="3"><![CDATA[PythonBridge_1.out]]></ReadOnlyProperty>
+    <Property LongName="RecFile_1.recs_absolute_paths" Type="0">false</Property>
+    <Property LongName="RecFile_1.threaded" Type="0">false</Property>
+    <Property LongName="RecFile_1.priority" Type="1">128</Property>
+    <Property LongName="RecFile_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="Player_1.undistort_1.imageOut" Input="ImageViewer_1.input">
+    <Replay Method="video_file"/>
+  </Connection>
+  <Connection Output="Player_1.OXTS_1_1.output" Input="ncomm_decoder_1.stream_in">
+    <Replay Method="rrmstream"/>
+  </Connection>
+  <Connection Output="ncomm_decoder_1.gps_pos_lla" Input="PythonBridge_1.lat_lon_alt"/>
+  <Connection Output="ncomm_decoder_1.gps_heading" Input="PythonBridge_1.gps_heading"/>
+  <Connection Input="RecFile_1.PythonBridge_1.out.input" Output="PythonBridge_1.out">
+    <Record Method="tabbed_text" neverskipping="false" useTimestamp="true"/>
+  </Connection>
+  <RTBoardView ID="JavaStudio1.0">
+    <ComponentBox InstanceName="undistort_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CropAndDecimate_1.input" color="0"/>
+    <ConnectionShape InstanceName="DataViewer_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ncomm_decoder_1.stream_in" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.gps_heading" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.lat_lon_alt" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.OXTS_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.Video4Linux_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.PythonBridge_1.out.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.undistort_1.imageOut.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.undistort_1_1.imageOut.input" color="0"/>
+    <ConnectionShape InstanceName="SUPERCOMBO.image_in" color="0"/>
+    <ConnectionShape InstanceName="undistort_1.imageIn" color="0"/>
+    <ConnectionShape InstanceName="undistort_1_1.imageIn" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>
